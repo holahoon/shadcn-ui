@@ -16,7 +16,6 @@ export function rehypeNpmCommand() {
           "npm install",
           "yarn add"
         )
-
         node.properties["__pnpmCommand__"] = npmCommand.replace(
           "npm install",
           "pnpm add"
