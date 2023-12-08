@@ -16,6 +16,7 @@ export function rehypeNpmCommand() {
           "npm install",
           "yarn add"
         )
+
         node.properties["__pnpmCommand__"] = npmCommand.replace(
           "npm install",
           "pnpm add"
@@ -31,8 +32,8 @@ export function rehypeNpmCommand() {
         const npmCommand = node.properties?.["__rawString__"]
         node.properties["__npmCommand__"] = npmCommand
         node.properties["__yarnCommand__"] = npmCommand.replace(
-          "npx create-",
-          "yarn create "
+          "npx create-next-app@latest",
+          "yarn create next-app"
         )
         node.properties["__pnpmCommand__"] = npmCommand.replace(
           "npx create-",
